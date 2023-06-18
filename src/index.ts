@@ -17,3 +17,18 @@ function Add(n1 : string,n2 : string)
 
 
 console.log(Add("10","20"));
+
+
+let variable: string | number | boolean = "soukaina ouchen";
+
+variable = 200;
+variable = false;
+variable = "helllo";
+
+let array = ["test1", "test2", "test3"]; // here we can enter what you want because we dont spicify the type
+//let array : string[] = ["test1", "test2", "test3"]
+for(var i = 0; i <array.length; i++)
+{
+    console.log(array[i].repeat(3));
+}
+
