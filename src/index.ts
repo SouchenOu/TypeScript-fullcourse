@@ -32,8 +32,8 @@ for(var i = 0; i <array.length; i++)
     console.log(array[i].repeat(3));
 }
 
-// type Annotations with Miltidimentsional Arrays
+// type Annotations with Miltidimentional Arrays
 
 let arrayOne: number[] = [1,2,3,4,5];
 let arrayTwo : string[] = ["one", "two", "three"];
-let arrayThree : (string | number | string[])[] = ["ttest1", "test2", "test3", 1, 22,["C", "A"]];
+let arrayThree : (string | number | string[] | boolean[])[] = ["ttest1", "test2", "test3", 1, 22,["C", "A"], [true, false]];
