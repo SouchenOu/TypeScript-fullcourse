@@ -27,4 +27,20 @@ function OurFunction(name, age, salary) {
     return "No data to show";
 }
 console.log(OurFunction("soukaina", "24", "10000"));
+function AddALL(...nums) {
+    let result = 0;
+    for (let i = 0; i < nums.length; i++) {
+        result += nums[i];
+        nums.forEach((num) => result += num);
+    }
+    return result;
+}
+console.log("result is : ");
+console.log(AddALL(10, 2, 3, 5));
+const AddFunction = function (num1, num2) {
+    return num1 + num2;
+};
+console.log(AddFunction(10, 20));
+const Function2 = (n1, n2) => n1 + n2;
+console.log(Function2(100, 200));
 //# sourceMappingURL=index.js.map

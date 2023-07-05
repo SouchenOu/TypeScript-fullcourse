@@ -56,3 +56,37 @@ function OurFunction(name : string, age : string, salary : string) : string
 
 
 console.log(OurFunction("soukaina", "24", "10000"));
+
+
+// Rest parameters
+
+function AddALL(...nums : number[]) : number
+{
+    let result = 0;
+    for(let i = 0; i < nums.length; i++)
+    {
+        result += nums[i];
+        nums.forEach((num) => result += num );
+        
+
+    }
+    return result;
+}
+
+console.log("result is : ");
+console.log(AddALL(10, 2, 3, 5));
+
+
+// Anonymous function
+//Arrow function
+
+const AddFunction = function(num1: number, num2: number) : number
+{
+    return num1 + num2;
+}
+
+console.log(AddFunction(10, 20));
+
+const Function2 = (n1: number, n2: number) : number => n1+ n2;
+
+console.log(Function2(100, 200));
