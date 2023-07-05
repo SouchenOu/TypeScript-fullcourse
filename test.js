@@ -4,4 +4,4 @@ function Add(n1,n2)
 }
 
 
-console.log(Add(10,"20"));
+console.log(Add(10,20));

@@ -27,13 +27,32 @@ variable = "helllo";
 
 let array = ["test1", "test2", "test3"]; // here we can enter what you want because we dont spicify the type
 //let array : string[] = ["test1", "test2", "test3"]
-for(var i = 0; i <array.length; i++)
-{
-    console.log(array[i].repeat(3));
-}
+// for(var i = 0; i <array.length; i++)
+// {
+//     console.log(array[i].repeat(3));
+// }
 
 // type Annotations with Miltidimentional Arrays
 
 let arrayOne: number[] = [1,2,3,4,5];
 let arrayTwo : string[] = ["one", "two", "three"];
-let arrayThree : (string | number | string[] | boolean[])[] = ["ttest1", "test2", "test3", 1, 22,["C", "A"], [true, false]];
+let arrayThree : (string | number | string[] | boolean[])[] = ["test1", "test2", "test3", 1, 22,["C", "A"], [true, false]];
+
+
+// Type annotation with function 
+
+let showMsg = true;
+
+function OurFunction(name : string, age : string, salary : string) : string
+{
+    if(showMsg)
+    {
+        return `Hello ${name} , age is ${age}, Salary is ${salary}`;
+    }
+    return "No data to show"
+
+}
+
+
+
+console.log(OurFunction("soukaina", "24", "10000"));

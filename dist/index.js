@@ -16,7 +16,15 @@ variable = 200;
 variable = false;
 variable = "helllo";
 let array = ["test1", "test2", "test3"];
-for (var i = 0; i < array.length; i++) {
-    console.log(array[i].repeat(3));
+let arrayOne = [1, 2, 3, 4, 5];
+let arrayTwo = ["one", "two", "three"];
+let arrayThree = ["test1", "test2", "test3", 1, 22, ["C", "A"], [true, false]];
+let showMsg = true;
+function OurFunction(name, age, salary) {
+    if (showMsg) {
+        return `Hello ${name} , age is ${age}, Salary is ${salary}`;
+    }
+    return "No data to show";
 }
+console.log(OurFunction("soukaina", "24", "10000"));
 //# sourceMappingURL=index.js.map
