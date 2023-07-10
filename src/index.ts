@@ -244,3 +244,13 @@ if(lvl == "Easy")
 {
     console.log(`The level is ${lvl} and Number of seconds is ${levels.Easy}`);
 }
+
+
+//***********Data type (Type assertions) */
+//----Sometime compiler Doesnt know the informationwe do
+//----TypeScript is not performing any check to make sure type assertion is valid
+
+//******We can write one of this lines */
+// let myImg = <HTMLImageElement> document.getElementById("my-img");
+let myImg = document.getElementById("my-img") as HTMLImageElement;
+
