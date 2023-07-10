@@ -66,5 +66,26 @@ function Compare(num1, num2) {
     else
         return 2;
 }
+function Compare2(num1, num2) {
+    if (num1 === num2) {
+        return 0;
+    }
+    else if (num1 > num2) {
+        return 1;
+    }
+    else
+        return 2;
+}
 console.log(Compare(200, 300));
+let articles = [12, "title number one", true];
+articles = [14, "title number two", false];
+console.log(`Our article is --> ${articles}`);
+console.log(`First element in my array is --> ${articles[0]}`);
+articles.push(200);
+console.log(`First element in my array is --> ${articles[0]}`);
+let articles2 = [100, "Last one", true];
+const [id, title, published] = articles;
+console.log(id);
+console.log(title);
+console.log(published);
 //# sourceMappingURL=index.js.map

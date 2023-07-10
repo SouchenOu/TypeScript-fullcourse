@@ -163,3 +163,36 @@ function Compare2(num1:number,num2:number) : nums{
 
 
 console.log(Compare(200, 300));
+
+
+
+
+// **************************************data Types   {Array} ***********************
+//Tuple
+//-------is another sort of array types */
+//-------We know exactly how many element is containes
+//-------We know each type it contains at spesific positions
+
+
+let articles: [number, string, boolean] = [12, "title number one", true];
+
+articles = [14, "title number two", false];
+console.log(`Our article is --> ${articles}`);
+console.log(`First element in my array is --> ${articles[0]}`);
+// we can push another element to my array
+
+articles.push(200);
+console.log(`First element in my array is --> ${articles[0]}`);
+
+// if we add readonly to our array then we cant push to that array
+
+let articles2: readonly [number, string, boolean] = [100, "Last one", true];
+
+// We can assign all articles element to another element
+const [id, title, published] = articles;
+
+console.log(id);
+console.log(title);
+console.log(published);
+
+
