@@ -218,4 +218,29 @@ function alwaysLog(name: string) : never{
     //return ;  --> this function will never return because we have loop infinie so we write never
 }
 
-    alwaysLog("souchen");
+    //alwaysLog("souchen");
+
+//**********************************Enums*************************** */
+//--Enums => Enumerations
+
+//---Allow us to Declare a set of named constants
+//---Used for logical grouping collection of constants "Collection of Related values"
+//---It orgnise your code
+//---By default Enums are number Based, First element is 0
+//---There is a numeric Enums
+//---There is a string Based enums
+//---There is Hetereneous Enums [string + Number]
+
+enum levels{
+    kids = 15,
+    Easy = 8,
+    Medium = 6,
+    Hard = 3
+}
+let lvl: string = "Easy";
+
+
+if(lvl == "Easy")
+{
+    console.log(`The level is ${lvl} and Number of seconds is ${levels.Easy}`);
+}

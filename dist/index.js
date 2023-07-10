@@ -93,5 +93,15 @@ function alwaysLog(name) {
         console.log(name);
     }
 }
-alwaysLog("souchen");
+var levels;
+(function (levels) {
+    levels[levels["kids"] = 15] = "kids";
+    levels[levels["Easy"] = 8] = "Easy";
+    levels[levels["Medium"] = 6] = "Medium";
+    levels[levels["Hard"] = 3] = "Hard";
+})(levels || (levels = {}));
+let lvl = "Easy";
+if (lvl == "Easy") {
+    console.log(`The level is ${lvl} and Number of seconds is ${levels.Easy}`);
+}
 //# sourceMappingURL=index.js.map
