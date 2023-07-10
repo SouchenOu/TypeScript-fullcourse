@@ -39,7 +39,7 @@ let arrayTwo : string[] = ["one", "two", "three"];
 let arrayThree : (string | number | string[] | boolean[])[] = ["test1", "test2", "test3", 1, 22,["C", "A"], [true, false]];
 
 
-// Type annotation with function 
+// *********************************************Type annotation with function************************* 
 
 let showMsg = true;
 
@@ -58,7 +58,7 @@ function OurFunction(name : string, age : string, salary : string) : string
 console.log(OurFunction("soukaina", "24", "10000"));
 
 
-// Rest parameters
+//************************************************Rest parameters**************************************
 
 function AddALL(...nums : number[]) : number
 {
@@ -66,7 +66,7 @@ function AddALL(...nums : number[]) : number
     for(let i = 0; i < nums.length; i++)
     {
         result += nums[i];
-        nums.forEach((num) => result += num );
+        nums.forEach((num) => result += num ); // we can use the first expression or this one
         
 
     }
@@ -77,7 +77,7 @@ console.log("result is : ");
 console.log(AddALL(10, 2, 3, 5));
 
 
-// Anonymous function
+//**************************************Anonymous function**************************/
 //Arrow function
 
 const AddFunction = function(num1: number, num2: number) : number
@@ -87,14 +87,14 @@ const AddFunction = function(num1: number, num2: number) : number
 
 console.log(AddFunction(10, 20));
 
-const Function2 = (n1: number, n2: number) : number => n1+ n2;
+const Function2 = (n1: number, n2: number) : number => n1 + n2;
 
 console.log(Function2(100, 200));
 
 const FunctionTest = (t1:number, t2:number) : number => t1 + t2;
 
 
-//******************************************type Alias**************/
+//******************************************type Alias********************************/
 
 type st = string; // so now ts is an alias of string
 let test1 : st = "souchen";
@@ -107,7 +107,7 @@ test2 = "souchen";
 test2 = 20; 
 
 
-// Data type
+// *******************************************Data type********************************/
 // Advanced type Alias
 
 type Buttons = {
@@ -132,3 +132,34 @@ function getFunction(btns: newOne)
     console.log(`Action for new button is ${btns.x}`)
 }
 getFunction({up: "Jump", right: "Go right", left: "Go left", down: "Go down", x: true});
+
+
+/*** data types*/
+/****Literal types */
+
+function Compare(num1: number, num2: number)
+{
+    if(num1 === num2)
+    {
+        return 0;
+    }else if(num1 > num2)
+    {
+        return 1;
+    }else  
+        return 2;
+}
+
+type nums = 0 | 1 | 2;
+function Compare2(num1:number,num2:number) : nums{
+    if(num1 === num2)
+    {
+        return 0;
+    }else if(num1 > num2)
+    {
+        return 1;
+    }else  
+        return 2;
+}
+
+
+console.log(Compare(200, 300));

@@ -56,4 +56,15 @@ function getFunction(btns) {
     console.log(`Action for new button is ${btns.x}`);
 }
 getFunction({ up: "Jump", right: "Go right", left: "Go left", down: "Go down", x: true });
+function Compare(num1, num2) {
+    if (num1 === num2) {
+        return 0;
+    }
+    else if (num1 > num2) {
+        return 1;
+    }
+    else
+        return 2;
+}
+console.log(Compare(200, 300));
 //# sourceMappingURL=index.js.map
