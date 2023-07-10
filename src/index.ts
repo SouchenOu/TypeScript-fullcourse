@@ -107,3 +107,28 @@ test2 = "souchen";
 test2 = 20; 
 
 
+// Data type
+// Advanced type Alias
+
+type Buttons = {
+    up: string,
+    right: string,
+    down: string,
+    left: string
+}
+
+// To add another element to this truct
+
+type newOne = Buttons & {
+    x : boolean;
+}
+
+function getFunction(btns: newOne)
+{
+    console.log(`Action for Button up is ${btns.up}`);
+    console.log(`Action for Button Right is ${btns.right}`);
+    console.log(`Action for Button Down is ${btns.down}`);
+    console.log(`Action for Button left is ${btns.left}`);
+    console.log(`Action for new button is ${btns.x}`)
+}
+getFunction({up: "Jump", right: "Go right", left: "Go left", down: "Go down", x: true});

@@ -43,4 +43,17 @@ const AddFunction = function (num1, num2) {
 console.log(AddFunction(10, 20));
 const Function2 = (n1, n2) => n1 + n2;
 console.log(Function2(100, 200));
+const FunctionTest = (t1, t2) => t1 + t2;
+let test1 = "souchen";
+let test2 = 10;
+test2 = "souchen";
+test2 = 20;
+function getFunction(btns) {
+    console.log(`Action for Button up is ${btns.up}`);
+    console.log(`Action for Button Right is ${btns.right}`);
+    console.log(`Action for Button Down is ${btns.down}`);
+    console.log(`Action for Button left is ${btns.left}`);
+    console.log(`Action for new button is ${btns.x}`);
+}
+getFunction({ up: "Jump", right: "Go right", left: "Go left", down: "Go down", x: true });
 //# sourceMappingURL=index.js.map
