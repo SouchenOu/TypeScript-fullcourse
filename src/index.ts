@@ -167,7 +167,7 @@ console.log(Compare(200, 300));
 
 
 
-// **************************************data Types   {Array} ***********************
+// **************************************data Types   {Array of different types} ***********************
 //Tuple
 //-------is another sort of array types */
 //-------We know exactly how many element is containes
@@ -196,3 +196,26 @@ console.log(title);
 console.log(published);
 
 
+
+//*************************************************Void and never************ */
+//-------------void */
+//---Function that will return nothing
+//---Function in JavaScript that not Return a value will show undefined 
+//---Undefined is not void
+
+
+//------------Never */
+//---Return Type Never Returns
+//---The Function Doesnt have a normal Compiletion
+//---It Throws an Error or Never Finishes Running At all "infinit loop"
+
+
+function alwaysLog(name: string) : never{
+    while(true)
+    {
+        console.log(name);
+    }
+    //return ;  --> this function will never return because we have loop infinie so we write never
+}
+
+    alwaysLog("souchen");

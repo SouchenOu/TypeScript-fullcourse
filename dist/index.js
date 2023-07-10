@@ -88,4 +88,10 @@ const [id, title, published] = articles;
 console.log(id);
 console.log(title);
 console.log(published);
+function alwaysLog(name) {
+    while (true) {
+        console.log(name);
+    }
+}
+alwaysLog("souchen");
 //# sourceMappingURL=index.js.map
