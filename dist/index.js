@@ -104,8 +104,10 @@ let lvl = "Easy";
 if (lvl == "Easy") {
     console.log(`The level is ${lvl} and Number of seconds is ${levels.Easy}`);
 }
-let myImg = document.getElementById("my-img");
-console.log(myImg.src);
-let Info = "1000";
-console.log(Info).repeat(3);
+function GetAction(btns) {
+    console.log(`Hello ${btns.one}`);
+    console.log(`Hello ${btns.two}`);
+    console.log(`Hello ${btns.three}`);
+}
+GetAction({ one: "souchen", two: 42, three: true });
 //# sourceMappingURL=index.js.map

@@ -246,11 +246,51 @@ if(lvl == "Easy")
 }
 
 
-//***********Data type (Type assertions) */
+//******************************Data type (Type assertions) ************************************/
 //----Sometime compiler Doesnt know the informationwe do
 //----TypeScript is not performing any check to make sure type assertion is valid
 
 //******We can write one of this lines */
-// let myImg = <HTMLImageElement> document.getElementById("my-img");
-let myImg = document.getElementById("my-img") as HTMLImageElement;
 
+
+// let myImg = <HTMLImageElement> document.getElementById("my-img");
+//--let myImg = document.getElementById("my-img") as HTMLImageElement;
+
+
+//*******************************Union and intersection types ************************** */
+
+//Union and Intersection Types
+//--Union type
+//----The |  Symbol is used to create the union => "Or"
+
+
+//Intersection Type
+//----Is A type that Combines Several Types into one
+//----The & Symbol is User to create an intersection => And
+
+
+//----- If a Union is An OR, Then an Intersection is an AND
+type A = {
+    one : string,
+    two : number,
+    three : boolean
+}
+// we add another element to this struct A
+
+type B = A &{
+    Four: number;
+}
+type C ={
+    Five: number;
+}
+
+type Mix = A & C;
+
+function GetAction(btns : A)
+{
+    console.log(`Hello ${btns.one}`);
+    console.log(`Hello ${btns.two}`);
+    console.log(`Hello ${btns.three}`);
+}
+
+GetAction({one : "souchen", two : 42, three: true});
