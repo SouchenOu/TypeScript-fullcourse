@@ -92,3 +92,18 @@ const Function2 = (n1: number, n2: number) : number => n1+ n2;
 console.log(Function2(100, 200));
 
 const FunctionTest = (t1:number, t2:number) : number => t1 + t2;
+
+
+//******************************************type Alias**************/
+
+type st = string; // so now ts is an alias of string
+let test1 : st = "souchen";
+
+
+type standnb = string | number;
+
+let test2 : standnb = 10;
+test2 = "souchen";
+test2 = 20; 
+
+
