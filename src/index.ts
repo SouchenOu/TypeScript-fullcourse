@@ -665,3 +665,43 @@ console.log(barOne.attack());
 console.log(amazon.attack());
 console.log(`Amazon spears is--> ${amazon.spears}`);
 console.log(`Durability is --> ${barOne.Durability}`);
+
+/***************************************Generics******************** */
+
+//--Help write a reusable code
+//--Allow to pass as a parameter to another type
+//--You will be able to deal with multiple Types without using : "Any type"
+//--We Can create:
+//--Generic Classes
+//--Generic Fynctions
+//--Generic Methods
+//--Generic interfaces
+
+
+
+// we have here 3 function with the same action (the first one return a string, the second one return a number and the third one return a boolean)
+function returnString(value : string) : string
+{
+    return value
+}
+
+function returnNumber(value: number) : number{
+    return value;
+}
+
+function returnBoolean(value: boolean) : boolean{
+    return value;
+}
+
+// by using generic we can write just one function that can return any type of attribute you want
+
+// we can write GenericType or T
+function returnType<GenericType>(val : GenericType) : GenericType
+{
+    return val;
+}
+
+
+console.log(returnType<number>(100));
+console.log(returnType<boolean>(true));
+console.log(returnType<string>("salut souka"));

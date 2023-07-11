@@ -285,4 +285,19 @@ console.log(barOne.attack());
 console.log(amazon.attack());
 console.log(`Amazon spears is--> ${amazon.spears}`);
 console.log(`Durability is --> ${barOne.Durability}`);
+function returnString(value) {
+    return value;
+}
+function returnNumber(value) {
+    return value;
+}
+function returnBoolean(value) {
+    return value;
+}
+function returnType(val) {
+    return val;
+}
+console.log(returnType(100));
+console.log(returnType(true));
+console.log(returnType("salut souka"));
 //# sourceMappingURL=index.js.map
