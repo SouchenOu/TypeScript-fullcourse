@@ -415,7 +415,7 @@ let set1 : Settings = {
 }
 
 
-//*************************************Interface extensing************************* */
+//*************************************Interface extending************************* */
 
 
 interface Home{
@@ -459,3 +459,27 @@ console.log(`The address is ${administator.address}`);
 console.log(`The country is ${administator.country}`);
 console.log(`The role is ${administator.role}`);
 console.log (`The protection is ${administator.protect}`);
+
+
+//******************************The Annotations with class******************************* */
+
+
+class Homme {
+    username : string;
+    age : number;
+    msg : () => string;
+    constructor(name : string, Age : number)
+    {
+        this.username = name,
+        this.age = Age;
+        this.msg = function() : string {
+            return `Hello ${this.username}, your age is ${this.age}`;
+        }
+    }
+}
+
+
+let userName = new Homme("soukaina ouchen", 24);
+
+console.log(`His name is ${userName.username}`);
+console.log(`His Age is ${userName.age}`);

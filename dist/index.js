@@ -174,4 +174,16 @@ console.log(`The address is ${administator.address}`);
 console.log(`The country is ${administator.country}`);
 console.log(`The role is ${administator.role}`);
 console.log(`The protection is ${administator.protect}`);
+class Homme {
+    constructor(name, Age) {
+        this.username = name,
+            this.age = Age;
+        this.msg = function () {
+            return `Hello ${this.username}, your age is ${this.age}`;
+        };
+    }
+}
+let userName = new Homme("soukaina ouchen", 24);
+console.log(`His name is ${userName.username}`);
+console.log(`His Age is ${userName.age}`);
 //# sourceMappingURL=index.js.map
