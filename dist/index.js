@@ -249,4 +249,40 @@ let pizzaOne = new Pizza("chicken pizza", "swetty");
 let Burger1 = new Burger("chess burger ", "also sweety");
 console.log(`The name of the first pizza is `, pizzaOne.title);
 console.log(`The name of the first burger is `, Burger1.title);
+class Player {
+    constructor(Name) {
+        this.name = Name;
+    }
+    attack() {
+        console.log("Attacking now");
+    }
+}
+class Amazon extends Player {
+    constructor(name, spears) {
+        super(name);
+        this.spears = spears;
+    }
+    attack() {
+        super.attack();
+        console.log("Amazon attack");
+        this.spears -= 1;
+    }
+}
+class barbarien extends Player {
+    constructor(name, Durability) {
+        super(name);
+        this.Durability = Durability;
+    }
+    attack() {
+        super.attack();
+        console.log("barbarien attack");
+        this.Durability += 1;
+    }
+}
+let barOne = new barbarien("test", 20);
+let amazon = new Amazon("book", 100);
+console.log(barOne.attack());
+console.log(amazon.attack());
+console.log(`Amazon spears is--> ${amazon.spears}`);
+console.log(`Durability is --> ${barOne.Durability}`);
 //# sourceMappingURL=index.js.map

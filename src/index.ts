@@ -606,3 +606,62 @@ let Burger1 = new Burger("chess burger ", "also sweety");
 
 console.log(`The name of the first pizza is `, pizzaOne.title);
 console.log(`The name of the first burger is `, Burger1.title);
+
+
+//**********************Polymorphism && Method Override************************** */
+
+//--Polymorphism is a classes have the same Method but different Implementations
+
+
+//--Method override
+//----Allowing Child class to provide implimentation of a Method in Parent class
+//----A method In child class Must Have same Name As Parent Class
+
+
+class Player{
+    public name : string ;
+    constructor(Name:string)
+    {
+        this.name =  Name;
+    }
+
+    attack() : void{
+        console.log("Attacking now");
+    }
+
+
+}
+
+
+class Amazon extends Player {
+    constructor(name:string, public spears: number)
+    {
+        super(name);
+    }
+    attack() : void{
+        super.attack();
+        console.log("Amazon attack");
+        this.spears-=1;
+
+    }
+}
+
+class barbarien extends Player{
+    constructor(name:string, public Durability:number)
+    {
+        super(name);
+    }
+    // There is attack in based class and in exetended class
+    attack() : void{
+        super.attack();
+        console.log("barbarien attack");
+        this.Durability+=1;
+    }
+}
+
+let barOne = new barbarien("test", 20);
+let amazon = new Amazon("book", 100);
+console.log(barOne.attack());
+console.log(amazon.attack());
+console.log(`Amazon spears is--> ${amazon.spears}`);
+console.log(`Durability is --> ${barOne.Durability}`);
