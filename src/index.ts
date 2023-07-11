@@ -384,3 +384,35 @@ let user2: UserInfo = {
 console.log("Interface with method");
 console.log(`His id is --> ${user2.id}`);
 console.log(`${user2.sayHello()}`);
+
+//*****************************Interface reopen and use cases***********************
+
+//HomePage
+
+interface Settings {
+    theme : boolean,
+    font: string
+}
+
+
+// Article page
+
+interface Settings {
+    sidebar : boolean;
+}
+
+// contact page
+
+interface Settings {
+    external: boolean;
+}
+
+let set1 : Settings = {
+    theme : true,
+    font : "Open sans",
+    sidebar: false,
+    external: true
+}
+
+
+//Contact
