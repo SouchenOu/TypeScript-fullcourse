@@ -300,4 +300,9 @@ function returnType(val) {
 console.log(returnType(100));
 console.log(returnType(true));
 console.log(returnType("salut souka"));
+const functionTest = (val) => val;
+function multipleTypes(valueOne, valueTwo) {
+    return `The first value is ${valueOne} And Second value is ${typeof valueTwo}`;
+}
+console.log(multipleTypes(100, "test"));
 //# sourceMappingURL=index.js.map

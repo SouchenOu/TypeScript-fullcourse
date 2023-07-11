@@ -705,3 +705,15 @@ function returnType<GenericType>(val : GenericType) : GenericType
 console.log(returnType<number>(100));
 console.log(returnType<boolean>(true));
 console.log(returnType<string>("salut souka"));
+
+// another method to write a function in TS
+const functionTest = <T>(val: T): T => val;
+
+/*******************************generic multiple types************************ */
+
+
+function multipleTypes<T, S>(valueOne: T, valueTwo : S) : string{
+    return `The first value is ${valueOne} And Second value is ${typeof valueTwo}`;
+}
+
+console.log(multipleTypes<number, string>(100, "test"));
