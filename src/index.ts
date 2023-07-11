@@ -522,6 +522,8 @@ class newPerson{
         }
 
     }
+
+    /****************************************Get and set Accessors***************************** */
     get Name() : string
     {
         return this.name;
@@ -548,4 +550,3 @@ console.log(dataUser);
 
 
 
-/****************************************Get and set Accessors***************************** */
