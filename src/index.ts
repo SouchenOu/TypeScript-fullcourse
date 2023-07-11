@@ -717,3 +717,41 @@ function multipleTypes<T, S>(valueOne: T, valueTwo : S) : string{
 }
 
 console.log(multipleTypes<number, string>(100, "test"));
+
+//*****************************Generics types *********************** */
+
+class Mems{
+    constructor(public value : string)
+    {
+
+    }
+
+    show(msg:string) :void{
+        console.log(`${msg} - ${this.value}`);
+    }
+}
+
+let MemsOne = new Mems("my name is soukaina ouchen");
+MemsOne.show("hallo ich bin souchen");
+
+
+// appliquer Generic class
+
+class MemsTest<T>{
+    constructor(public val: T){}
+    show(msg: T) : void
+    {
+        console.log(`${msg}`);
+    }
+}
+
+// if we dont use union here to specific the all possible types , we will use just a numbre attribute type, because I put 112 in the value
+
+ let MemsTwo = new MemsTest(112);
+ MemsTwo.show(10); 
+
+
+ /****This is the solution of the problem */
+ 
+// let MemsTwo = new MemsTest<number | string>(112);
+// MemsTwo.show("10");

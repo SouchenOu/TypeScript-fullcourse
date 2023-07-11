@@ -305,4 +305,24 @@ function multipleTypes(valueOne, valueTwo) {
     return `The first value is ${valueOne} And Second value is ${typeof valueTwo}`;
 }
 console.log(multipleTypes(100, "test"));
+class Mems {
+    constructor(value) {
+        this.value = value;
+    }
+    show(msg) {
+        console.log(`${msg} - ${this.value}`);
+    }
+}
+let MemsOne = new Mems("my name is soukaina ouchen");
+MemsOne.show("hallo ich bin souchen");
+class MemsTest {
+    constructor(val) {
+        this.val = val;
+    }
+    show(msg) {
+        console.log(`${msg}`);
+    }
+}
+let MemsTwo = new MemsTest(112);
+MemsTwo.show("Welcome in 1337");
 //# sourceMappingURL=index.js.map
