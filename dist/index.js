@@ -131,4 +131,18 @@ function GetData(data) {
     console.log(`country is ${data.country}`);
 }
 GetData({ id: 10, username: "soukaina", country: "maroc" });
+let user2 = {
+    id: 200,
+    username: "souchen",
+    country: "Morroco",
+    sayHello() {
+        return `Hello ${this.username}`;
+    },
+    sayWelcome() {
+        return `Welcome in 1337`;
+    }
+};
+console.log("Interface with method");
+console.log(`his id is --> ${user2.id}`);
+console.log(`${user2.sayHello()}`);
 //# sourceMappingURL=index.js.map

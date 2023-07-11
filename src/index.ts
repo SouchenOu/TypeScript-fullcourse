@@ -354,3 +354,33 @@ function GetData(data : User)
 
 
 GetData({id: 10, username:"soukaina", country: "maroc"});
+
+
+//*************************Interface Method and parameters**************************** */
+
+interface UserInfo {
+    id: number,
+    username: string,
+    country: string,
+    sayHello() : string,
+    sayWelcome : () => string
+}
+
+let user2: UserInfo = {
+    id: 200,
+    username: "souchen",
+    country: "Morroco",
+    sayHello(){
+        return `Hello ${this.username}`;
+    },
+    sayWelcome()
+    {
+        return `Welcome in 1337`;
+    }
+}
+
+
+
+console.log("Interface with method");
+console.log(`His id is --> ${user2.id}`);
+console.log(`${user2.sayHello()}`);
