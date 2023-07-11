@@ -193,10 +193,33 @@ class newPerson {
         this.address = address;
         this.Nationality = Nationality;
         this.msg = function () {
-            return `Hello ${this.name}, your age is ${Age}, your address is ${address} and your nationality is ${Nationality}`;
+            return `Hello ${this.name}, your age is ${this.Age}, your address is ${this.address} and your nationality is ${this.Nationality}`;
         };
+    }
+    get Name() {
+        return this.name;
+    }
+    set Name(value) {
+        this.name = value;
     }
 }
 let dataUser = new newPerson("SOUKAINA", 23, "255 KHOURIBGA", "MORROCO");
+console.log(dataUser.Name);
+dataUser.Name = "ouchen";
 console.log(dataUser);
+class newClass {
+    static getCount() {
+        console.log(`${this.created} object created`);
+    }
+    constructor(name) {
+        this.name = name;
+        newClass.created++;
+    }
+}
+newClass.created = 0;
+let classElement1 = new newClass("soukaina");
+let classElement2 = new newClass("asmae");
+let classElement3 = new newClass("salma");
+let classElement4 = new newClass("fati");
+console.log(newClass.getCount());
 //# sourceMappingURL=index.js.map

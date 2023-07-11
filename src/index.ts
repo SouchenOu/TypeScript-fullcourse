@@ -548,5 +548,22 @@ console.log(dataUser.Name);
 dataUser.Name = "ouchen";// this is the setter of name attribute
 console.log(dataUser);
 
+/*************************************Static members**********************************/
 
+class newClass{
+    static created: number = 0;
+    static getCount() : void {
+        console.log(`${this.created} object created`);
+    }
+    constructor(public name: string)
+    {
+        newClass.created++;
+    }
+}
 
+let classElement1 = new newClass("soukaina");
+let classElement2 = new newClass("asmae");
+let classElement3 = new newClass("salma");
+let classElement4 = new newClass("fati");
+
+console.log(newClass.getCount());
