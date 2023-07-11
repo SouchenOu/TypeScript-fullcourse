@@ -294,3 +294,63 @@ function GetAction(btns : A)
 }
 
 GetAction({one : "souchen", two : 42, three: true});
+
+
+//************************Type annotations with object****************** */
+
+let myObject: 
+{
+    username: string,
+    id: number,
+    hire: boolean
+} = {
+    username: "souchen",
+    id: 100,
+    hire: true
+};
+
+
+// we can change the data of our object
+
+myObject.username = "soukaina";
+myObject.id = 200;
+myObject.hire = false;
+
+//******************************************Interface**********************************/
+
+//--Interface Declaration
+//--Serve like types
+//--The interface Describes the shape of an object
+//--It defines the syntax to follow
+
+//---Use with object
+//---Use with function
+//---Use read only and optional operator
+
+
+//** There is no interface in javaScript, there is just OBJECT*/
+
+interface User {
+    id: number,
+    username: string,
+    country: string
+}
+
+let user: User = {
+    id: 200,
+    username: "souchen",
+    country: "Morroco"
+}
+
+console.log(user);
+
+function GetData(data : User)
+{
+    console.log("our data is:");
+    console.log(`id is ${data.id} `);
+    console.log(`username is ${data.username}`);
+    console.log(`country is ${data.country}`);
+}
+
+
+GetData({id: 10, username:"soukaina", country: "maroc"});

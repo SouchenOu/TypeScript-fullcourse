@@ -110,4 +110,25 @@ function GetAction(btns) {
     console.log(`Hello ${btns.three}`);
 }
 GetAction({ one: "souchen", two: 42, three: true });
+let myObject = {
+    username: "souchen",
+    id: 100,
+    hire: true
+};
+myObject.username = "soukaina";
+myObject.id = 200;
+myObject.hire = false;
+let user = {
+    id: 200,
+    username: "souchen",
+    country: "Morroco"
+};
+console.log(user);
+function GetData(data) {
+    console.log("our data is:");
+    console.log(`id is ${data.id} `);
+    console.log(`username is ${data.username}`);
+    console.log(`country is ${data.country}`);
+}
+GetData({ id: 10, username: "soukaina", country: "maroc" });
 //# sourceMappingURL=index.js.map
