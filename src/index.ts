@@ -483,3 +483,50 @@ let userName = new Homme("soukaina ouchen", 24);
 
 console.log(`His name is ${userName.username}`);
 console.log(`His Age is ${userName.age}`);
+
+
+/*************Data access Modifiears & Parameters Properties */
+
+//---Public
+//-----------All Members of a class TypeScript are PUBLIC
+//-----------All public Members can be accessed anywhere without any restrictions
+//---Private
+//-----------Members are visible Only to that class and are not accessible outsite the class
+//---Protected
+//-----------Same Like provite but can be accessed using the Deriving class
+
+
+//*** TypeScript is a Layer on top of Jvascript
+//-It should Remove All Annotations and Although Access Modifiers "Private For example"
+
+
+
+
+class newPerson{
+    
+        private name: string;
+        private Age: number;
+        public address: string;
+        protected Nationality: string;
+        msg: () => string;
+
+    constructor(name: string, Age: number, address: string, Nationality:string)
+    {
+        this.name = name;
+        this.Age = Age;
+        this.address = address;
+        this.Nationality = Nationality;
+        this.msg = function()
+        {
+            return `Hello ${this.name}, your age is ${this.Age}, your address is ${this.address} and your nationality is ${this.Nationality}`
+        }
+
+    }
+
+    
+
+}
+
+
+let dataUser = new newPerson("SOUKAINA", 23, "255 KHOURIBGA", "MORROCO");
+console.log(dataUser);

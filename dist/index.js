@@ -186,4 +186,17 @@ class Homme {
 let userName = new Homme("soukaina ouchen", 24);
 console.log(`His name is ${userName.username}`);
 console.log(`His Age is ${userName.age}`);
+class newPerson {
+    constructor(name, Age, address, Nationality) {
+        this.name = name;
+        this.Age = Age;
+        this.address = address;
+        this.Nationality = Nationality;
+        this.msg = function () {
+            return `Hello ${this.name}, your age is ${Age}, your address is ${address} and your nationality is ${Nationality}`;
+        };
+    }
+}
+let dataUser = new newPerson("SOUKAINA", 23, "255 KHOURIBGA", "MORROCO");
+console.log(dataUser);
 //# sourceMappingURL=index.js.map
