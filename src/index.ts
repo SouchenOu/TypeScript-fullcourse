@@ -522,11 +522,30 @@ class newPerson{
         }
 
     }
+    get Name() : string
+    {
+        return this.name;
+    }
+
+    set Name(value : string)
+    {
+        this.name = value;
+    }
 
     
 
 }
 
+// now we can print the value of name because there is a geter of name attribute
+
+
 
 let dataUser = new newPerson("SOUKAINA", 23, "255 KHOURIBGA", "MORROCO");
+
+console.log(dataUser.Name);
+dataUser.Name = "ouchen";// this is the setter of name attribute
 console.log(dataUser);
+
+
+
+/****************************************Get and set Accessors***************************** */
