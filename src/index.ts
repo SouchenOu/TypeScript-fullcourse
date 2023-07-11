@@ -415,4 +415,47 @@ let set1 : Settings = {
 }
 
 
-//Contact
+//*************************************Interface extensing************************* */
+
+
+interface Home{
+    id: number,
+    address: number,
+    country: string
+}
+
+interface Moderator extends Home {
+    role: string | number
+}
+
+let HomeElement : Home = {
+    id: 100,
+    address: 228,
+    country: "morroco"
+}
+
+let modePeron : Moderator = {
+    id : 500,
+    address: 888,
+    country: "France",
+    role: "Amploye"
+}
+
+interface Admin extends Home, Moderator {
+    protect: boolean;
+}
+
+let administator : Admin = {
+      id: 800,
+      address: 877,
+      country: "German",
+      role: "Amploye",
+      protect: true
+}
+
+
+console.log(`The id is ${administator.id}`);
+console.log(`The address is ${administator.address}`);
+console.log(`The country is ${administator.country}`);
+console.log(`The role is ${administator.role}`);
+console.log (`The protection is ${administator.protect}`);

@@ -143,6 +143,35 @@ let user2 = {
     }
 };
 console.log("Interface with method");
-console.log(`his id is --> ${user2.id}`);
+console.log(`His id is --> ${user2.id}`);
 console.log(`${user2.sayHello()}`);
+let set1 = {
+    theme: true,
+    font: "Open sans",
+    sidebar: false,
+    external: true
+};
+let HomeElement = {
+    id: 100,
+    address: 228,
+    country: "morroco"
+};
+let modePeron = {
+    id: 500,
+    address: 888,
+    country: "France",
+    role: "Amploye"
+};
+let administator = {
+    id: 800,
+    address: 877,
+    country: "German",
+    role: "Amploye",
+    protect: true
+};
+console.log(`The id is ${administator.id}`);
+console.log(`The address is ${administator.address}`);
+console.log(`The country is ${administator.country}`);
+console.log(`The role is ${administator.role}`);
+console.log(`The protection is ${administator.protect}`);
 //# sourceMappingURL=index.js.map
