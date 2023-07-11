@@ -222,4 +222,31 @@ let classElement2 = new newClass("asmae");
 let classElement3 = new newClass("salma");
 let classElement4 = new newClass("fati");
 console.log(newClass.getCount());
+class Food {
+    constructor(title) {
+        this.title = title;
+    }
+}
+class Pizza extends Food {
+    constructor(title, type) {
+        super(title);
+        this.type = type;
+    }
+    getCooking() {
+        console.log("Cooking time for pizza");
+    }
+}
+class Burger extends Food {
+    constructor(title, gender) {
+        super(title);
+        this.gender = gender;
+    }
+    getCooking() {
+        console.log("Cooking time for Burger");
+    }
+}
+let pizzaOne = new Pizza("chicken pizza", "swetty");
+let Burger1 = new Burger("chess burger ", "also sweety");
+console.log(`The name of the first pizza is `, pizzaOne.title);
+console.log(`The name of the first burger is `, Burger1.title);
 //# sourceMappingURL=index.js.map

@@ -567,3 +567,42 @@ let classElement3 = new newClass("salma");
 let classElement4 = new newClass("fati");
 
 console.log(newClass.getCount());
+
+/**********************************abstract class and Members***************************** */
+
+// we cant create an instance of an abstract class
+
+
+abstract class Food{
+    constructor(public title:string){}
+    abstract getCooking() : void;
+}
+
+class Pizza extends Food{
+    constructor(title:string, public type:string)
+    {
+        super(title);
+    }
+    getCooking() : void
+    {
+        console.log("Cooking time for pizza");
+    }
+
+}
+
+class Burger extends Food{
+    constructor(title:string, public gender:string)
+    {
+        super(title);
+    }
+    getCooking() : void
+    {
+        console.log("Cooking time for Burger");
+    }
+}
+
+let pizzaOne = new Pizza("chicken pizza", "swetty");
+let Burger1 = new Burger("chess burger ", "also sweety");
+
+console.log(`The name of the first pizza is `, pizzaOne.title);
+console.log(`The name of the first burger is `, Burger1.title);
