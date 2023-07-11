@@ -324,5 +324,18 @@ class MemsTest {
     }
 }
 let MemsTwo = new MemsTest(112);
-MemsTwo.show("Welcome in 1337");
+MemsTwo.show(10);
+class collection {
+    constructor() {
+        this.data = [];
+    }
+    Add(value) {
+        this.data.push(value);
+    }
+}
+let element1 = new collection();
+element1.Add({ itemType: "romantic", title: "Harry potter", isbn: 123 });
+element1.Add({ itemType: "romantic && action", title: "crime ", isbn: 200 });
+element1.data[0];
+console.log(`first element is `, element1);
 //# sourceMappingURL=index.js.map

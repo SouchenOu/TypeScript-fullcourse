@@ -752,6 +752,41 @@ class MemsTest<T>{
 
 
  /****This is the solution of the problem */
- 
+
 // let MemsTwo = new MemsTest<number | string>(112);
 // MemsTwo.show("10");
+
+
+
+/*****************************Generics and interfaces****************** */
+
+interface book{
+    itemType: string,
+    title:string;
+    isbn:number;
+}
+
+interface Game{
+    itemType: string;
+    title: string;
+    style:string;
+    price:number;
+}
+
+class collection<T>
+{
+    data : T[] = [];
+    Add(value : T) : void{
+        this.data.push(value);
+    }
+}
+
+
+let element1 = new collection<book>();
+element1.Add({itemType: "romantic", title : "Harry potter", isbn : 123 });
+element1.Add({itemType: "romantic && action", title : "crime ", isbn : 200});
+
+element1.data[0];
+
+console.log(`first element is `, element1);
+
