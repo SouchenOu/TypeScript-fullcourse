@@ -1,5 +1,7 @@
 # TypeScript
 
+https://www.youtube.com/watch?v=30LWjhZzg50
+
 1. Create configuration and watch files
 2. Statically vs Dynamically Typed Languages
 3. Type Annotations and any Data Type
