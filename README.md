@@ -33,3 +33,12 @@
 31. Generics Multiple Types
 32. Generics Classes
 33. Generics and interfaces
+
+
+TypeScript :
+-----------
+
+Typescript is a superset of Javascript, but it is not like it is adding more features, it doent give you more of   callbacks, it doesnt give you more of arrow function , it just allows you to wite javascript in much precise manner 
+
+
+
